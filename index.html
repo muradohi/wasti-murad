@@ -74,9 +74,17 @@
   .logo { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; color: var(--ink); letter-spacing: 0.5px; }
   .logo .dot { color: var(--accent-2); }
   .nav-right { display: flex; align-items: center; gap: 1.5rem; }
-  nav ul { list-style: none; display: flex; gap: 1.75rem; }
-  nav ul a { font-size: 0.95rem; color: var(--ink-soft); font-weight: 500; }
-  nav ul a:hover { color: var(--accent-2); }
+  nav ul { list-style: none; display: flex; gap: 1.25rem; }
+  nav ul a {
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  font-weight: 500;
+  transition: all 0.2s ease;
+    }
+  nav ul a:hover {
+  color: var(--accent-2);
+  transform: translateY(-1px);
+    }
   .theme-toggle {
     background: transparent;
     border: 1px solid var(--line);
@@ -1942,7 +1950,7 @@
 ========================================================= -->
 <nav>
   <div class="container">
-    <a href="#top" class="logo">Wasti Murad<span class="dot">.</span></a>
+    <a href="#top" class="logo">W.M.<span class="dot">.</span></a>
     <div class="nav-right">
       <ul id="navMenu">
         <li><a href="#about">About</a></li>
@@ -1950,10 +1958,7 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#thinking">Thinking</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
         <li><a href="#achievements">Awards</a></li>
-        <li><a href="#chess">Puzzle</a></li>
-        <li><a href="#travel">Travel</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">&#9789;</button>
@@ -2408,11 +2413,10 @@
       <div class="edu-card">
         <div class="deg-icon">&#127891;</div>
         <h3>MSc Data Science for Decision Making</h3>
-        <p class="uni">Maastricht University &middot; Netherlands</p>
+        <p class="uni">Maastricht University · Netherlands</p>
         <span class="yrs">Sep 2023 – Aug 2025</span>
-        <div class="courses">
-          <strong>Key courses</strong>
-          Computer Vision · Deep Learning · Data Mining · Computational Statistics
+        <div class="edu-highlight">
+          Thesis: Interpretable 3D VAE for Adaptive Radiotherapy (Maastro Clinic)
         </div>
       </div>
 
@@ -2421,10 +2425,6 @@
         <h3>BSc Physics</h3>
         <p class="uni">Jahangirnagar University &middot; Bangladesh</p>
         <span class="yrs">Mar 2017 – Sep 2022</span>
-        <div class="courses">
-          <strong>Key courses</strong>
-          Quantum Mechanics · Nuclear Physics · Solid State Physics · Mathematical Physics
-        </div>
       </div>
 
     </div>
@@ -2649,7 +2649,7 @@
     [
       { type: 'in',  text: 'import experience as exp' },
       { type: 'in',  text: 'exp.summary()' },
-      { type: 'out', text: '1+ year · 8+ ML projects · NL & EU' },
+      { type: 'out', text: '1+ year · 10+ ML projects · NL & EU' },
       { type: 'in',  text: 'exp.next_role.status()' },
       { type: 'out', text: 'Actively interviewing' }
     ],
@@ -2950,7 +2950,7 @@
       stack: ["Python", "LangChain", "GPT-4o", "ChromaDB", "Streamlit"],
       glyph: "piece-bishop",
       image: "",
-      github: "https://github.com/muradohi",
+      github: "https://github.com/muradohi/E-Commerce-Analytics-Chatbot",
       businessContext: {
         problem: "E-commerce teams asking LLMs for sales figures get confident but fabricated numbers. The model doesn't know your database — it hallucinates plausible-looking figures that destroy trust after the first wrong report reaches a business decision.",
         inaction: "Teams stop trusting the tool entirely after one bad number. They return to manual SQL queries, and the LLM investment produces nothing. Or worse, decisions keep getting made on invented data without anyone noticing.",
@@ -2970,7 +2970,7 @@
       stack: ["CausalML", "T-Learner", "Uplift RF", "Statsmodels"],
       glyph: "piece-pawn",
       image: "",
-      github: "https://github.com/muradohi",
+      github: "https://github.com/muradohi/Causal-Inference-for-Marketing-Campaign-Optimization",
       businessContext: {
         problem: "Marketing teams spend on everyone who 'looks like' a converter. But the highest-spending, highest-intent customers were already going to buy — absorbing budget without adding lift, while the genuinely persuadable segment went untouched.",
         inaction: "Campaigns show strong headline metrics (high converters received the ad!) while actual incremental return stays near zero. Budget keeps flowing to sure things. The persuadable 25% — who actually needed the nudge — never get it.",
@@ -2990,7 +2990,7 @@
       stack: ["Databricks", "PySpark", "Delta Lake", "DLT", "SQL"],
       glyph: "db-stack",
       image: "",
-      github: "https://github.com/muradohi",
+      github: "https://github.com/muradohi/databricks-dlt-medallion-pipeline",
       businessContext: {
         problem: "Batch pipelines fail silently — schema drift, late-arriving records, midnight manual fixes. Analysts work with yesterday's numbers without knowing it, and a decision gets made on corrupted data before anyone notices the pipeline was broken.",
         inaction: "Errors compound downstream. A bad aggregate reaches a dashboard, a business call gets made, and blame falls on 'the data' rather than the architecture. The cost isn't just one bad metric — it's the erosion of trust in every number the team produces.",
@@ -3010,7 +3010,7 @@
       stack: ["Docker", "GitHub Actions", "FastAPI", "scikit-learn", "pytest"],
       glyph: "piece-knight",
       image: "",
-      github: "https://github.com/muradohi",
+      github: "https://github.com/muradohi/ml-cicd-streamlit",
       businessContext: {
         problem: "Models trained in notebooks, deployed manually, monitored ad-hoc. 'It worked on my machine' is the de facto production standard. Degradation gets caught by frustrated users, not engineers — often weeks after the problem began.",
         inaction: "Every manual handoff is a failure point: inconsistent environments, forgotten preprocessing steps, no rollback path. The cognitive overhead accumulates, slowing every future change and making engineers afraid to touch a model that's 'working'.",
@@ -3030,7 +3030,7 @@
       stack: ["PyTorch", "CUDA", "MONAI", "nibabel", "MLflow", "Maastro Clinic"],
       glyph: "piece-queen",
       image: "",
-      github: "https://github.com/muradohi",
+      github: "https://github.com/muradohi/Thesis_Project",
       businessContext: {
         problem: "Radiotherapy AI tools that outperform clinicians on planning benchmarks sit unused in research papers. Not because they're wrong — but because no clinician will stake a patient's treatment on a recommendation they can't inspect, challenge, or defend to a colleague or regulator.",
         inaction: "Capable AI systems that never escape the lab. The performance improvement exists on paper while the actual clinical workflow continues unchanged. Every year of non-adoption is a year of sub-optimal treatment plans for real patients.",
@@ -3050,7 +3050,7 @@
       stack: ["SQL", "Window Functions", "CTEs", "Tableau"],
       glyph: "piece-rook",
       image: "",
-      github: "https://github.com/muradohi",
+      github: "https://github.com/muradohi/Sql-Apple-Sales",
       businessContext: {
         problem: "Retail operations making investment decisions — staffing levels, product mix, promotional priority — on aggregate averages that hide the real distribution. When 20% of stores drive 40% of revenue, treating all stores equally is an expensive mistake hidden inside a clean-looking average.",
         inaction: "Uniform budget allocation to a non-uniform performance landscape. High-performing stores are under-resourced; low-performing ones absorb investment that won't move the needle. The mid-tier warranty gap goes unnoticed, and premium product reliability gets assumed rather than verified.",
