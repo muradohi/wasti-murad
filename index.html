@@ -133,9 +133,10 @@
     background: rgba(201, 169, 106, 0.06);
     border-left: 2px solid var(--accent);
     padding: 0.8rem 1.05rem;
+    padding-bottom: 1rem;
     border-radius: 4px;
     max-width: 600px;
-    min-height: 7em;
+    min-height: 9.5em; /* 👈 updated */
     white-space: pre;
     overflow: hidden;
     position: relative;
@@ -1910,77 +1911,6 @@
     <div class="section-divider" aria-hidden="true"><svg viewBox="0 0 140 26" preserveAspectRatio="none"><line class="loss-axis" x1="0" y1="22" x2="140" y2="22"/><path class="loss-curve" d="M0,4 C12,5 18,8 26,11 S40,18 52,19 S72,20 86,20.5 S110,21 140,21.4"/><circle class="loss-dot" cx="140" cy="21.4" r="0"/></svg></div>
     <p class="skills-intro">A focused stack — the things I reach for daily are <span class="sk-tag primary" style="font-size: 0.74rem; padding: 0.15rem 0.5rem;">highlighted</span>; the rest I've shipped with in real projects.</p>
 
-    <!-- Skills correlation matrix — symmetric, df[skills].corr() style -->
-    <div class="skills-corr" aria-label="Skills correlation matrix">
-      <div class="corr-head">
-        <div class="corr-title">&gt;&gt;&gt; df[skills].corr().round(2)</div>
-        <div class="corr-legend">
-          <span>0.0</span>
-          <span class="corr-grad" aria-hidden="true"></span>
-          <span>1.0</span>
-        </div>
-      </div>
-      <div class="corr-grid">
-        <div class="corr-empty"></div>
-        <div class="corr-col-h">Python</div>
-        <div class="corr-col-h">ML/DL</div>
-        <div class="corr-col-h">LLMs</div>
-        <div class="corr-col-h">BigData</div>
-        <div class="corr-col-h">MLOps</div>
-        <div class="corr-col-h">Analytics</div>
-
-        <div class="corr-row-h">Python</div>
-        <div class="corr-cell diag" style="--v:1.00">1.00</div>
-        <div class="corr-cell" style="--v:0.89">0.89</div>
-        <div class="corr-cell" style="--v:0.81">0.81</div>
-        <div class="corr-cell" style="--v:0.74">0.74</div>
-        <div class="corr-cell" style="--v:0.83">0.83</div>
-        <div class="corr-cell" style="--v:0.78">0.78</div>
-
-        <div class="corr-row-h">ML/DL</div>
-        <div class="corr-cell" style="--v:0.89">0.89</div>
-        <div class="corr-cell diag" style="--v:1.00">1.00</div>
-        <div class="corr-cell" style="--v:0.67">0.67</div>
-        <div class="corr-cell" style="--v:0.43">0.43</div>
-        <div class="corr-cell" style="--v:0.71">0.71</div>
-        <div class="corr-cell" style="--v:0.36">0.36</div>
-
-        <div class="corr-row-h">LLMs</div>
-        <div class="corr-cell" style="--v:0.81">0.81</div>
-        <div class="corr-cell" style="--v:0.67">0.67</div>
-        <div class="corr-cell diag" style="--v:1.00">1.00</div>
-        <div class="corr-cell" style="--v:0.28">0.28</div>
-        <div class="corr-cell" style="--v:0.58">0.58</div>
-        <div class="corr-cell" style="--v:0.24">0.24</div>
-
-        <div class="corr-row-h">BigData</div>
-        <div class="corr-cell" style="--v:0.74">0.74</div>
-        <div class="corr-cell" style="--v:0.43">0.43</div>
-        <div class="corr-cell" style="--v:0.28">0.28</div>
-        <div class="corr-cell diag" style="--v:1.00">1.00</div>
-        <div class="corr-cell" style="--v:0.62">0.62</div>
-        <div class="corr-cell" style="--v:0.51">0.51</div>
-
-        <div class="corr-row-h">MLOps</div>
-        <div class="corr-cell" style="--v:0.83">0.83</div>
-        <div class="corr-cell" style="--v:0.71">0.71</div>
-        <div class="corr-cell" style="--v:0.58">0.58</div>
-        <div class="corr-cell" style="--v:0.62">0.62</div>
-        <div class="corr-cell diag" style="--v:1.00">1.00</div>
-        <div class="corr-cell" style="--v:0.39">0.39</div>
-
-        <div class="corr-row-h">Analytics</div>
-        <div class="corr-cell" style="--v:0.78">0.78</div>
-        <div class="corr-cell" style="--v:0.36">0.36</div>
-        <div class="corr-cell" style="--v:0.24">0.24</div>
-        <div class="corr-cell" style="--v:0.51">0.51</div>
-        <div class="corr-cell" style="--v:0.39">0.39</div>
-        <div class="corr-cell diag" style="--v:1.00">1.00</div>
-      </div>
-      <div class="corr-foot">// co-occurrence of skill domains across shipped projects (n=8)</div>
-    </div>
-
-    <div class="skills-board">
 
       <!-- Languages & Core -->
       <div class="sk">
@@ -2424,7 +2354,6 @@
       <a href="https://github.com/muradohi" target="_blank" rel="noopener">GitHub</a>
     </div>
     <p class="copyright">&copy; <span id="year"></span> Wasti Murad &middot; Built with caffeine, curiosity, and the occasional chess game.</p>
-    <p class="easter-hint">// hint: try the konami code &uarr;&uarr;&darr;&darr;&larr;&rarr;&larr;&rarr;BA &middot; or open the console</p>
   </div>
 </footer>
 
@@ -2462,7 +2391,6 @@
   <div class="chatbot-header">
     <div>
       Ask About Wasti
-      <small>knowledge_base.json &middot; v1.1</small>
     </div>
     <button class="chatbot-close" id="chatClose" aria-label="Close">&times;</button>
   </div>
@@ -2513,8 +2441,8 @@
   /* ---------- Typewriter (Python REPL session) ---------- */
   const TYPEWRITER_SCRIPTS = [
     [
-      { type: 'in',  text: 'from murad import data, models' },
-      { type: 'in',  text: 'career = models.fit(curiosity, persistence)' },
+      { type: 'in',  text: 'from murad import systems, evaluation' },
+      { type: 'in',  text: 'career = systems.build(data, models, evaluation)' },
       { type: 'in',  text: 'career.predict(next_role)' },
       { type: 'out', text: "'Data Scientist | ML Engineer | AI Engineer'" }
     ],
@@ -2522,13 +2450,13 @@
       { type: 'in',  text: 'import experience as exp' },
       { type: 'in',  text: 'exp.summary()' },
       { type: 'out', text: '1+ year · 8+ ML projects · NL & EU' },
-      { type: 'in',  text: 'exp.next_role.likelihood()' },
-      { type: 'out', text: '0.94' }
+      { type: 'in',  text: 'exp.next_role.status()' },
+      { type: 'out', text: 'Actively interviewing' }
     ],
     [
       { type: 'in',  text: 'from chess import endgame' },
-      { type: 'in',  text: 'endgame.solve(mate_in=1)' },
-      { type: 'out', text: "'Rxa6#  // pinned pawn'" }
+      { type: 'in',  text: 'endgame.solve(position="complex_system")' },
+      { type: 'out', text: "'simplify → isolate → solve'" }
     ]
   ];
   const PY_KEYWORDS = ['from','import','as','def','return','for','in','if','else','True','False','None'];
@@ -2639,7 +2567,7 @@
     const footEl  = document.getElementById('hudFoot');
     const closeBtn = document.getElementById('hudClose');
 
-    const TOTAL_EPOCHS = 50;
+    const TOTAL_EPOCHS = 10;
     let epoch = 1;
     let loss = 0.6432;
     let acc = 0.7821;
