@@ -2947,7 +2947,7 @@
         "ChromaDB MMR retrieval + context-strict GPT-4o prompts handle mixed sales-and-review questions",
         "LLM-as-judge evaluator scores faithfulness, relevance, and hallucination — YAML-config model swaps"
       ],
-      stack: ["Python", "LangChain", "GPT-4o", "ChromaDB", "Streamlit"],
+      stack: ["Python", "LangChain", "RAG", "ChromaDB", "Streamlit"],
       glyph: "piece-bishop",
       image: "",
       github: "https://github.com/muradohi/E-Commerce-Analytics-Chatbot",
@@ -2978,26 +2978,6 @@
       }
     },
     {
-      domain: "Data Engineering · Streaming",
-      year: "2025",
-      title: "From Brittle Batch to Real-Time Medallion",
-      impact: "Took a batch ELT graveyard and rebuilt it as a streaming Medallion pipeline that enforces schema and data quality at every layer.",
-      points: [
-        "Bronze → Silver → Gold with ACID transactions, change-data-capture, and declarative quality expectations",
-        "PySpark transformations for joins, derived metrics, and type casting — Git-versioned inside Databricks",
-        "Real-time freshness without sacrificing reproducibility or audit trail"
-      ],
-      stack: ["Databricks", "PySpark", "Delta Lake", "DLT", "SQL"],
-      glyph: "db-stack",
-      image: "",
-      github: "https://github.com/muradohi/databricks-dlt-medallion-pipeline",
-      businessContext: {
-        problem: "Batch pipelines fail silently — schema drift, late-arriving records, midnight manual fixes. Analysts work with yesterday's numbers without knowing it, and a decision gets made on corrupted data before anyone notices the pipeline was broken.",
-        inaction: "Errors compound downstream. A bad aggregate reaches a dashboard, a business call gets made, and blame falls on 'the data' rather than the architecture. The cost isn't just one bad metric — it's the erosion of trust in every number the team produces.",
-        whyML: "This wasn't a modeling problem — it was an architecture problem. Streaming with quality enforcement at each medallion layer (Bronze → Silver → Gold) catches errors before they propagate, not after. Declarative expectations replace hope with guarantees at every stage."
-      }
-    },
-    {
       domain: "MLOps · CI/CD",
       year: "2025",
       title: "Models That Ship on Every Commit",
@@ -3015,6 +2995,26 @@
         problem: "Models trained in notebooks, deployed manually, monitored ad-hoc. 'It worked on my machine' is the de facto production standard. Degradation gets caught by frustrated users, not engineers — often weeks after the problem began.",
         inaction: "Every manual handoff is a failure point: inconsistent environments, forgotten preprocessing steps, no rollback path. The cognitive overhead accumulates, slowing every future change and making engineers afraid to touch a model that's 'working'.",
         whyML: "Automation doesn't just save time — it removes the possibility of forgetting a step. A CI/CD pipeline makes the machine responsible for reproducibility so the engineer can focus on improving the model, not babysitting the release."
+      }
+    },
+    {
+      domain: "Data Engineering · Streaming",
+      year: "2025",
+      title: "From Brittle Batch to Real-Time Medallion",
+      impact: "Took a batch ELT graveyard and rebuilt it as a streaming Medallion pipeline that enforces schema and data quality at every layer.",
+      points: [
+        "Bronze → Silver → Gold with ACID transactions, change-data-capture, and declarative quality expectations",
+        "PySpark transformations for joins, derived metrics, and type casting — Git-versioned inside Databricks",
+        "Real-time freshness without sacrificing reproducibility or audit trail"
+      ],
+      stack: ["Databricks", "PySpark", "Delta Lake", "DLT", "SQL"],
+      glyph: "db-stack",
+      image: "",
+      github: "https://github.com/muradohi/databricks-dlt-medallion-pipeline",
+      businessContext: {
+        problem: "Batch pipelines fail silently — schema drift, late-arriving records, midnight manual fixes. Analysts work with yesterday's numbers without knowing it, and a decision gets made on corrupted data before anyone notices the pipeline was broken.",
+        inaction: "Errors compound downstream. A bad aggregate reaches a dashboard, a business call gets made, and blame falls on 'the data' rather than the architecture. The cost isn't just one bad metric — it's the erosion of trust in every number the team produces.",
+        whyML: "This wasn't a modeling problem — it was an architecture problem. Streaming with quality enforcement at each medallion layer (Bronze → Silver → Gold) catches errors before they propagate, not after. Declarative expectations replace hope with guarantees at every stage."
       }
     },
     {
