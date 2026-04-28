@@ -2126,7 +2126,7 @@
       ML Engineer | Data Scientist | AI Engineer
     </p>
     <div class="typewriter" aria-label="Python REPL session"><code id="typewriterText"></code><span class="cursor"></span></div>
-    <p class="tagline">MSc Data Science graduate from Maastricht University. I build interpretable ML systems and end-to-end data pipelines that turn analysis into business decisions — bringing the same structured thinking to a deep learning bug as to a chess endgame.</p>
+    <p class="tagline">MSc Data Science graduate from Maastricht University. I build interpretable ML systems and end-to-end data pipelines that turn analysis into business decisions, bringing the same structured thinking to a deep learning bug as to a chess endgame.</p>
     <div class="hero-actions">
       <a href="#projects" class="btn primary">projects.show()</a>
       <a href="#contact" class="btn">contact.me()</a>
@@ -2521,7 +2521,7 @@
         <!-- Insight closer -->
         <div class="case-lesson">
           <span class="case-lesson-label">// the insight</span>
-          <p>The 4% reconstruction gain was incidental. The real work was making the model's reasoning legible in the language clinicians already use — because in healthcare AI, adoption is the metric. Everything else is a proxy for it.</p>
+          <p>The 4% reconstruction gain was incidental. The real work was making the model's reasoning legible in the language clinicians already use, because in healthcare AI, adoption is the metric. Everything else is a proxy for it.</p>
         </div>
       </div>
  
@@ -2546,7 +2546,7 @@
         <h3>Master's Thesis — AI-Guided Adaptive Radiotherapy</h3>
         <div class="timeline-meta"><span class="place">Maastricht University &amp; Maastro Clinic</span> &middot; Feb 2025 – Aug 2025</div>
         <ul>
-          <li>Built a 3D Variational Autoencoder with attention that generates anatomy-preserving counterfactuals — solving the lack of interpretability in radiotherapy AI workflows and improving reconstruction quality by 4%</li>
+          <li>Built a 3D Variational Autoencoder with attention that generates anatomy-preserving counterfactuals, solving the lack of interpretability in radiotherapy AI workflows and improving reconstruction quality by 4%</li>
           <li>Restructured the latent space to separate tumor from organ variations, enabling clinician-validated traversals ready for medical review</li>
           <li>Established an MLflow-based experimentation workflow for reproducible collaborative research</li>
         </ul>
@@ -2568,7 +2568,7 @@
         <h3>Personal Wildlife Monitoring (Group Research)</h3>
         <div class="timeline-meta"><span class="place">Maastricht University</span> &middot; Aug 2023 – Jul 2024</div>
         <ul>
-          <li>Architected an edge-to-cloud pipeline using motion and audio triggers — eliminating manual stream screening and cutting key-moment detection from hours to minutes</li>
+          <li>Architected an edge-to-cloud pipeline using motion and audio triggers, eliminating manual stream screening and cutting key-moment detection from hours to minutes</li>
           <li>Integrated real-time object detection, Transformers, and acoustic features into a multimodal pipeline behind a containerized FastAPI backend</li>
         </ul>
         <div class="timeline-tech">// Python · OpenCV · Librosa · Transformers · Docker</div>
@@ -2691,7 +2691,7 @@
       <div class="chess-info">
         <div class="puzzle-meta">// puzzle.001 — white to move</div>
         <h3>Find the move that ends it.</h3>
-        <p>It looks like Black has a defender — but appearances lie. <strong>One move</strong> finishes the game. Click a white piece, then the square you want it to land on.</p>
+        <p>It looks like Black has a defender but appearances lie. <strong>One move</strong> finishes the game. Click a white piece, then the square you want it to land on.</p>
         <div class="chess-status" id="chessStatus">Ready when you are. Tap a white piece to begin.</div>
         <div class="chess-controls">
           <button class="btn-mini-c" id="chessReset">Reset</button>
@@ -3127,27 +3127,27 @@
       domain: "Generative AI · RAG",
       year: "2026",
       title: "LLM Analytics Assistant That Doesn't Hallucinate Numbers",
-      impact: "Killed the #1 failure mode of LLM data apps — wrong numbers stated with confidence — by routing every question to the right engine before generation.",
+      impact: "Killed the #1 failure mode of LLM data apps, wrong numbers stated with confidence by routing every question to the right engine before generation.",
       points: [
         "Query router dispatches to Pandas, RAG, or a hybrid pipeline based on intent",
         "ChromaDB MMR retrieval + context-strict GPT-4o prompts handle mixed sales-and-review questions",
-        "LLM-as-judge evaluator scores faithfulness, relevance, and hallucination — YAML-config model swaps"
+        "LLM-as-judge evaluator scores faithfulness, relevance, and hallucination, YAML-config model swaps"
       ],
       stack: ["Python", "LangChain", "RAG", "ChromaDB", "Streamlit"],
       glyph: "piece-bishop",
       image: "",
       github: "https://github.com/muradohi/E-Commerce-Analytics-Chatbot",
       businessContext: {
-        problem: "E-commerce teams asking LLMs for sales figures get confident but fabricated numbers. The model doesn't know your database — it hallucinates plausible-looking figures that destroy trust after the first wrong report reaches a business decision.",
+        problem: "E-commerce teams asking LLMs for sales figures get confident but fabricated numbers. The model doesn't know your database, it hallucinates plausible-looking figures that destroy trust after the first wrong report reaches a business decision.",
         inaction: "Teams stop trusting the tool entirely after one bad number. They return to manual SQL queries, and the LLM investment produces nothing. Or worse, decisions keep getting made on invented data without anyone noticing.",
-        whyML: "Queries are natural language and genuinely mixed: sometimes 'look up this revenue figure', sometimes 'explain this sentiment pattern'. You can't SQL your way to a review insight, and you can't RAG your way to an accurate sales total. The fix wasn't a smarter model — it was a smarter dispatcher."
+        whyML: "Queries are natural language and genuinely mixed: sometimes 'look up this revenue figure', sometimes 'explain this sentiment pattern'. You can't SQL your way to a review insight, and you can't RAG your way to an accurate sales total. The fix wasn't a smarter model, it was a smarter dispatcher."
       }
     },
     {
       domain: "Causal Inference · Marketing",
       year: "2025",
       title: "Marketing Spend That Targets the Truly Persuadable",
-      impact: "Replaced \"looks correlated with revenue\" with \"would not have converted otherwise\" — surfacing a 25–30% high-uplift segment to spend on.",
+      impact: "Replaced \"looks correlated with revenue\" with \"would not have converted otherwise\", surfacing a 25–30% high-uplift segment to spend on.",
       points: [
         "T-Learner + Uplift Random Forest on observational marketing data with propensity correction",
         "High-uplift segment concentrated in high-prior-spend, Outdoor/Fashion buyers",
@@ -3158,9 +3158,9 @@
       image: "",
       github: "https://github.com/muradohi/Causal-Inference-for-Marketing-Campaign-Optimization",
       businessContext: {
-        problem: "Marketing teams spend on everyone who 'looks like' a converter. But the highest-spending, highest-intent customers were already going to buy — absorbing budget without adding lift, while the genuinely persuadable segment went untouched.",
+        problem: "Marketing teams spend on everyone who 'looks like' a converter. But the highest-spending, highest-intent customers were already going to buy, absorbing budget without adding lift, while the genuinely persuadable segment went untouched.",
         inaction: "Campaigns show strong headline metrics (high converters received the ad!) while actual incremental return stays near zero. Budget keeps flowing to sure things. The persuadable 25% — who actually needed the nudge — never get it.",
-        whyML: "A standard predictive model makes this worse, not better — it targets high-intent buyers, not high-uplift buyers. Only causal methods (propensity correction, T-Learner) can separate 'tends to buy' from 'buys because of us'. The framing question determines whether the output is useful or actively misleading."
+        whyML: "A standard predictive model makes this worse, not better, it targets high-intent buyers, not high-uplift buyers. Only causal methods (propensity correction, T-Learner) can separate 'tends to buy' from 'buys because of us'. The framing question determines whether the output is useful or actively misleading."
       }
     },
     {
@@ -3198,7 +3198,7 @@
       image: "",
       github: "https://github.com/muradohi/databricks-dlt-medallion-pipeline",
       businessContext: {
-        problem: "Batch pipelines fail silently — schema drift, late-arriving records, midnight manual fixes. Analysts work with yesterday's numbers without knowing it, and a decision gets made on corrupted data before anyone notices the pipeline was broken.",
+        problem: "Batch pipelines fail silently, schema drift, late-arriving records, midnight manual fixes. Analysts work with yesterday's numbers without knowing it, and a decision gets made on corrupted data before anyone notices the pipeline was broken.",
         inaction: "Errors compound downstream. A bad aggregate reaches a dashboard, a business call gets made, and blame falls on 'the data' rather than the architecture. The cost isn't just one bad metric — it's the erosion of trust in every number the team produces.",
         whyML: "This wasn't a modeling problem — it was an architecture problem. Streaming with quality enforcement at each medallion layer (Bronze → Silver → Gold) catches errors before they propagate, not after. Declarative expectations replace hope with guarantees at every stage."
       }
@@ -3238,7 +3238,7 @@
       image: "",
       github: "https://github.com/muradohi/Sql-Apple-Sales",
       businessContext: {
-        problem: "Retail operations making investment decisions — staffing levels, product mix, promotional priority — on aggregate averages that hide the real distribution. When 20% of stores drive 40% of revenue, treating all stores equally is an expensive mistake hidden inside a clean-looking average.",
+        problem: "Retail operations making investment decisions — staffing levels, product mix, promotional priority on aggregate averages that hide the real distribution. When 20% of stores drive 40% of revenue, treating all stores equally is an expensive mistake hidden inside a clean-looking average.",
         inaction: "Uniform budget allocation to a non-uniform performance landscape. High-performing stores are under-resourced; low-performing ones absorb investment that won't move the needle. The mid-tier warranty gap goes unnoticed, and premium product reliability gets assumed rather than verified.",
         whyML: "This wasn't a modeling problem — the signal was in the data, not buried in noise. Well-structured SQL answered the strategic question more clearly and more auditably than any ML model would have. Knowing when not to reach for a complex approach is part of the discipline."
       }
