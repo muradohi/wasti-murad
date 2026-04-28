@@ -2422,15 +2422,15 @@
       <div class="case-study">
         <span class="case-number">// case_study_01 &middot; causal inference &middot; marketing</span>
         <h3>The Campaign That Was "Working" — Wasn't</h3>
-        <p class="case-context">An observational marketing dataset, ~5,000 users, conversion rates between 8–13%. Exposure wasn't randomized — users were targeted by prior spend, visits, segment, channel, country. A raw comparison would overestimate the effect. The question wasn't <em>did the campaign work</em> — it was <em>for whom, and by how much</em>.</p>
- 
+        <p class="case-context">An observational marketing dataset, ~5,000 users, conversion rates between 8–13%. Exposure wasn't randomized, users were targeted by prior spend, visits, segment, channel, and country. A raw comparison would overestimate the effect. The question wasn't <em>did the campaign work</em>, it was <em>for whom, and by how much</em>.</p>
+        
         <div class="case-steps">
  
           <!-- Always visible: The problem -->
           <div class="case-step">
             <div class="case-step-label">The problem</div>
             <div class="case-step-body">
-              <p>Higher-spend and more active users were slightly more likely to be treated. Mild selection bias, not severe — distributions overlapped — but enough that a naive comparison would credit the campaign for purchases that were going to happen anyway. The standard predictive framing ("who buys?") would confidently target the wrong people: certain converters who needed no nudge. The right question was different: <em>who buys because of us?</em></p>
+              <p>Higher-spend and more active users were slightly more likely to be treated. Mild selection bias, not severe, distributions overlapped, but enough that a naive comparison would credit the campaign for purchases that were going to happen anyway. The standard predictive framing ("who buys?") would confidently target the wrong people: certain converters who needed no nudge. The right question was different: <em>who buys because of us?</em></p>
             </div>
           </div>
  
@@ -2438,7 +2438,7 @@
           <div class="case-step">
             <div class="case-step-label">The impact</div>
             <div class="case-step-body">
-              <p>Average uplift across the audience was 5.75 percentage points. But the top 25–30% of users showed 11–14 points — two to three times the average. Concentrated in high-spend customers in Outdoor and Fashion, and in India and Social channels. Food, Health, and Email showed consistently low incremental effect.</p>
+              <p>Average uplift across the audience was 5.75 percentage points. But the top 25–30% of users showed 11–14 points, two to three times the average. Concentrated in high-spend customers in Outdoor and Fashion, and in India and Social channels. Food, Health, and Email showed consistently low incremental effect.</p>
               <p>The output wasn't a ranked list of likely buyers. It was a three-bucket allocation framework: <strong>target</strong> the persuadable top quartile, <strong>don't spend</strong> on certain converters who buy anyway, <strong>exclude</strong> segments with no treatment effect. That distinction is what converts a model output into a budget decision a marketing team can act on.</p>
             </div>
           </div>
@@ -2459,7 +2459,7 @@
               <div class="case-step-label">Why a T-Learner</div>
               <div class="case-step-body">
                 <p>Average treatment effect tells you whether to run the campaign. It doesn't tell you who to spend on. For that I needed individual-level heterogeneity — uplift per user, not population mean. I used a T-Learner: separate outcome models for treated and control, with the difference as the estimated uplift. Simple, interpretable, and aligned with what the stratified results were already showing.</p>
-                <div class="case-insight">"The question 'who buys?' is the wrong question. 'Who buys because of us?' requires a different model entirely — and asking it first is what determines whether the output is useful."</div>
+                <div class="case-insight">"The question 'who buys?' is the wrong question. 'Who buys because of us?' requires a different model entirely and asking it first is what determines whether the output is useful."</div>
               </div>
             </div>
           </details>
@@ -2469,7 +2469,7 @@
         <!-- Insight closer -->
         <div class="case-lesson">
           <span class="case-lesson-label">// the insight</span>
-          <p>Average effects mislead. The campaign "worked" — but most of the value came from a quarter of the audience, and a well-run standard predictive model would have pointed budget at the wrong people with confidence. Heterogeneity isn't a nuance; it's where the ROI lives.</p>
+          <p>Average effects mislead. The campaign "worked" but most of the value came from a quarter of the audience, and a well-run standard predictive model would have pointed budget at the wrong people with confidence. Heterogeneity isn't a nuance; it's where the ROI lives.</p>
         </div>
       </div>
  
@@ -2477,7 +2477,7 @@
       <div class="case-study">
         <span class="case-number">// case_study_02 &middot; healthcare AI &middot; interpretability</span>
         <h3>The Model That Was Right, That Nobody Used</h3>
-        <p class="case-context">Maastro Clinic had AI capable of improving radiotherapy planning. It wasn't being used — not because it was wrong, but because being right isn't enough when the stakes are a patient's treatment plan.</p>
+        <p class="case-context">Maastro Clinic had AI capable of improving radiotherapy planning. It wasn't being used not because it was wrong, but because being right isn't enough when the stakes are a patient's treatment plan.</p>
  
         <div class="case-steps">
  
@@ -2493,7 +2493,7 @@
           <div class="case-step">
             <div class="case-step-label">The impact</div>
             <div class="case-step-body">
-              <p>Disentangle the latent space so tumor variation and organ variation lived on separate, navigable axes. The deliverable wasn't a more accurate model — it was a model whose reasoning a clinician could traverse: <em>"show me what changes if the tumor is smaller."</em> Counterfactual reasoning in the same anatomical language they already think in.</p>
+              <p>Disentangle the latent space so tumor variation and organ variation lived on separate, navigable axes. The deliverable wasn't a more accurate model, it was a model whose reasoning a clinician could traverse: <em>"show me what changes if the tumor is smaller."</em> Counterfactual reasoning in the same anatomical language they already think in.</p>
             </div>
           </div>
  
@@ -2504,7 +2504,7 @@
             <div class="case-step">
               <div class="case-step-label">What needed to change</div>
               <div class="case-step-body">
-                <p>The model could output a treatment plan. It couldn't say: "if the tumor boundary were 3mm smaller here, the field would shift like this." That kind of counterfactual, anatomically grounded reasoning is how radiotherapy oncologists already think. Any explanation that didn't match their existing mental model would be dismissed — not because it was wrong, but because it spoke a different language.</p>
+                <p>The model could output a treatment plan. It couldn't say: "if the tumor boundary were 3mm smaller here, the field would shift like this." That kind of counterfactual, anatomically grounded reasoning is how radiotherapy oncologists already think. Any explanation that didn't match their existing mental model would be dismissed, not because it was wrong, but because it spoke a different language.</p>
               </div>
             </div>
  
