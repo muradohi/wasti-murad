@@ -2475,56 +2475,56 @@
  
       <!-- ===================== CASE STUDY 2 ===================== -->
       <div class="case-study">
-        <span class="case-number">// case_study_02 &middot; healthcare AI &middot; interpretability</span>
-        <h3>The Model That Was Right, That Nobody Used</h3>
-        <p class="case-context">Maastro Clinic had AI capable of improving radiotherapy planning. It wasn't being used not because it was wrong, but because being right isn't enough when the stakes are a patient's treatment plan.</p>
- 
+        <span class="case-number">// case_study_02 · predictive maintenance · time series</span>
+        <h3>The Engine That Looked Healthy — Wasn't</h3>
+        <p class="case-context">A fleet of turbofan engines, each producing multivariate sensor time-series across hundreds of cycles. No engine is identical, operating conditions vary, and degradation is gradual. The goal wasn't just to predict failure, but to decide <em>when intervention is actually necessary</em>.</p>
+      
         <div class="case-steps">
- 
-          <!-- Always visible: The problem -->
+      
+          <!-- The problem -->
           <div class="case-step">
             <div class="case-step-label">The problem</div>
             <div class="case-step-body">
-              <p>In clinical settings, a recommendation a clinician can't explain is a recommendation they can't use. Not for lack of technical trust — but because clinical decision-making requires defensible reasoning: to colleagues, to patients, to regulators. A black-box output, even a correct one, breaks that chain. The model was accurate. It was also invisible to the people who needed to act on it.</p>
+              <p>Early in an engine’s life, predicting whether it has 200 or 250 cycles left doesn’t change any decision. Late in life, being wrong by even 10 cycles can mean failure. A standard regression framing treats all errors equally, but operationally they are not. The question wasn’t just <em>how many cycles remain</em>, it was <em>when does uncertainty become critical</em>.</p>
             </div>
           </div>
- 
-          <!-- Always visible: The decision -->
+      
+          <!-- The impact -->
           <div class="case-step">
             <div class="case-step-label">The impact</div>
             <div class="case-step-body">
-              <p>Disentangle the latent space so tumor variation and organ variation lived on separate, navigable axes. The deliverable wasn't a more accurate model, it was a model whose reasoning a clinician could traverse: <em>"show me what changes if the tumor is smaller."</em> Counterfactual reasoning in the same anatomical language they already think in.</p>
+              <p>The model prioritised accuracy in the late degradation phase, where decisions matter most. Instead of treating RUL as a uniform prediction problem, the system emphasised risk-aware estimation. The output was not just a number, but a prioritisation signal: which engines require attention now versus later.</p>
             </div>
           </div>
- 
-          <!-- Collapsible: the analytical depth -->
+      
+          <!-- Expand -->
           <details class="case-expand">
             <summary>Read the full diagnosis</summary>
- 
+      
             <div class="case-step">
-              <div class="case-step-label">What needed to change</div>
+              <div class="case-step-label">The diagnosis</div>
               <div class="case-step-body">
-                <p>The model could output a treatment plan. It couldn't say: "if the tumor boundary were 3mm smaller here, the field would shift like this." That kind of counterfactual, anatomically grounded reasoning is how radiotherapy oncologists already think. Any explanation that didn't match their existing mental model would be dismissed, not because it was wrong, but because it spoke a different language.</p>
+                <p>Raw sensor values fluctuate heavily due to operating conditions, masking the degradation signal. The first step was not modelling, but removing this noise through feature engineering: rolling statistics, trend slopes, and variance windows that expose gradual wear over time. This transformed the problem from noisy time-series into structured degradation patterns.</p>
               </div>
             </div>
- 
+      
             <div class="case-step">
-              <div class="case-step-label">The technical insight</div>
+              <div class="case-step-label">The modelling choice</div>
               <div class="case-step-body">
-                <p>A Variational Autoencoder learns a compressed latent representation of anatomy. The root problem was entanglement: tumor variation and organ variation were mixed together in that space, making the latent axes uninterpretable. Separating them created dimensions a clinician could actually traverse. That's not a statistical explanation — it's the anatomy the model learned, made navigable.</p>
+                <p>Tree-based models like XGBoost performed strongly because they captured nonlinear interactions between sensors and degradation features without requiring sequence-level training. The improvement wasn’t from model complexity, but from aligning the representation with how degradation actually manifests.</p>
+                <div class="case-insight">"Predicting failure is easy. Predicting when the prediction matters is the real problem."</div>
               </div>
             </div>
           </details>
- 
+      
         </div>
- 
-        <!-- Insight closer -->
+      
+        <!-- Insight -->
         <div class="case-lesson">
           <span class="case-lesson-label">// the insight</span>
-          <p>The 4% reconstruction gain was incidental. The real work was making the model's reasoning legible in the language clinicians already use, because in healthcare AI, adoption is the metric. Everything else is a proxy for it.</p>
+          <p>Not all prediction errors are equal. In predictive maintenance, value comes from being right when it matters, not from being uniformly accurate. Framing the problem around decision impact, not just model performance, is what makes the system useful.</p>
         </div>
       </div>
- 
     </div>
   </div>
 </section>
