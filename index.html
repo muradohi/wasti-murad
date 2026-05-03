@@ -2899,13 +2899,13 @@
     charIdx++;
     if (charIdx <= line.text.length) {
       renderState();
-      const speed = line.type === 'in' ? (28 + Math.random() * 30) : (18 + Math.random() * 20);
+      const speed = line.type === 'in' ? (12 + Math.random() * 15) : (8 + Math.random() * 10);
       setTimeout(typeStep, speed);
     } else {
       lineIdx++;
       charIdx = 0;
       renderState();
-      const pause = line.type === 'out' ? 1100 : 320;
+      const pause = line.type === 'out' ? 700 : 180;
       setTimeout(typeStep, pause);
     }
   }
